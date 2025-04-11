@@ -4,7 +4,11 @@ print(len(text))
 text1 = "ZeroDayExploit"
 print(text1[0])
 print(text1[5])
-print(text1[13])
+print(text1[-1])
+
+text7 = "MalwareHunter"
+print(text[0:7])
+print(text[7:])
 
 text2 = "hELLO wORlD"
 print(text2.lower())
