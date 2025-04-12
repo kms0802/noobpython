@@ -2,8 +2,8 @@ print("1. 기본 구조")
 try:
     x = int(input("숫자를 입력하세요: "))
     print("입력한 숫자:", x)
-except ValueError:
-    print("숫자가 아닌 값을 입력했어요!")
+except (ValueError, IndexError):
+    print("잘못된 입력 또는 인덱스가 존재하지 않습니다.")
 
 print("2. 여러 종류의 예외 다루기")
 try:
