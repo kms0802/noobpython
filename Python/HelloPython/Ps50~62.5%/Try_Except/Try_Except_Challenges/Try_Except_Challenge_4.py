@@ -1,22 +1,38 @@
-print("1. 리스트 나누기")
+print("1. 숫자 입력하고 출력하기")
 try:
-    nums = [100, 50, 0, 25]
-    n = int(input("입력: "))
-    result = n / 100
-    print(result)
-except (ValueError, IndexError):
-    print("잘못된 값이거나 인덱스에 없습니다.")
+    num = int(input("숫자 입력:"))
+    print(num)
+except ValueError:
+    print("숫자만 입력해 주세요.")
 
-print("2. 입력받은 숫자2자리 이상 확인")
+print("2. 0으로 나눌 때 에러 처리하기")
 try:
-    a = int(input("a값 입력:"))
-    if a < 10:
-        raise ValueError("두 자리 이상 숫자만 입력하세요.")
-except ValueError as e:
-    print("오류: ", e)
+    a = int(input("입력값:"))
+    result = 10 / a
+except ZeroDivisionError:
+    print("0으로 나눌 수 없습니다.")
+except ValueError:
+    print("숫자를 입력하세요")
 
-print("3. 파일을 읽되, 확장자 검사하기")
-filename = input("파일 이름:")
-f = open(filename, "w")
-if f.last(".txt"):
-    raise ValueError("텍스트 파일만 열 수 있습니다.")
+print("3. 파일 열기")
+try:
+    with open("data.txt", "r") as f:
+        connect = f.read()
+
+except FileNotFoundError:
+    print("파일이 없습니다.")
+
+print("4. 문자열을 정수로 변환하기")
+try:
+    str_num = "123"
+    num_4 = int(str_num)
+except ValueError:
+    print("정수로 변환할 수 없습니다.")
+
+print("5. finally 사용하기")
+try:
+    nu = int(input("입력하세요:"))
+except ValueError:
+    print("잘못된")
+finally:
+    print("입력 시도 완료")
