@@ -19,6 +19,14 @@ print(ip_list)
 #arr.add("admin")
 #print(arr)
 
+arr = set() # 빈 배열 생성
+arr.add("admin")
+arr.add("user")
+arr.add("guest")
+print(arr)
+
+arr.remove("user")
+print(arr)
 
 # 6. 두 집합의 교집합 구하기
 a = {"sql", "xss", "dos"}
