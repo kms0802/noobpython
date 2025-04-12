@@ -32,4 +32,8 @@ activity = {
     "admin": ["login", "delete"]
 }
 for act , val in activity.items():
-    print(act, "-", val)
+    print(act, "님의 활동 기록:")
+    print()
+    for va in val:
+        print(va)
+        print()
