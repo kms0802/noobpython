@@ -5,7 +5,7 @@ print()
 
 print("2. 'a'가 포함된 단어만 고르기")
 words = ["apple", "banana", "kiwi", "grape", "melon"]
-words_first = [word for word in words if word[0] == "a"]
+words_first = [word for word in words if "a" in word]
 print(words_first)
 print()
 
@@ -17,10 +17,10 @@ print()
 
 print("4. 길이가 5 이상인 문자열의 길이만 출력")
 data = ["root", "access", "permit", "id", "firewall"]
-data_length = [dat for dat in data if len(dat) >= 5]
+data_length = [len(dat) for dat in data if len(dat) >= 5]
 print(data_length)
 print()
 
 print("5. 1~50 중에서 3과 5의 공배수만 출력")
-num = [x for x in range(1, 51) if x == (3 * 5)]
+num = [x for x in range(1, 51) if x % 3 == 0 and x % 5 == 0]
 print(num)
