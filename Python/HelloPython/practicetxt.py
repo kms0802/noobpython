@@ -1,21 +1,14 @@
-class Person:
-    def __init__(self,name,age):
+class User:
+    next_id = 0
+    def __inif(self, name):
         self.name = name
-        self.age = age
+        self.user_id = User.next_id
+        User.next_id += 1
     
-    def greet(self):
-        print("안녕하세요, 제 이름은", self.name, "이고, 나이는 ", self.age, "입니다.")
-p1 = Person("철수", 20)
-p1.greet()
+    def show(self):
+        print(f"{self.name} , {self.user_id}")
 
-class Account:
-    def __init__(self, username):
-        self.username = username
-        self.logged_in = False
-    
-    def login(self):
-        self.logged_in = True
-        print(self.username, "님 로그인되었습니다.")
-
-a1 = Account("admin")
-a1.login()
+u1 = User("홍길동")
+u2 = User("철수")
+u1.show()
+u2.show()
