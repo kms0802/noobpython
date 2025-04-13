@@ -1,15 +1,16 @@
 class Person:
-    def __init__(self,name,age):
+    def __init__(self, name, age):
         self.name = name
         self.age = age
     
     def greet(self):
-        print("안녕하세요, 제 이름은", self.name, "이고, 나이는 ", self.age, "입니다.")
+        print("안녕하세요. 제 이름은 ", self.name, "입니다.")
+
 p1 = Person("철수", 20)
 p1.greet()
 
 class Account:
-    def __init__(self, username):
+    def __init__(self,username):
         self.username = username
         self.logged_in = False
     
