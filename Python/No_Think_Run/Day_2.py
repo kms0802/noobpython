@@ -26,3 +26,11 @@ def battle(character):
 
 battle(Warrior())
 battle(Mage())
+
+print("=======================")
+
+class Thief(Character):
+    def attack(self):
+        print("비수를 던진다!")
+
+team.append(Thief())
