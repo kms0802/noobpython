@@ -38,3 +38,4 @@ class Robot(Machine):
 
 r = Robot()
 r.use_power()
+
