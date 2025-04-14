@@ -5,6 +5,10 @@ class User:
         self.attempts = 0
     
     def login(self, input_pw):
+        if self.attempts >= 4:
+            print("계정이 잠겼습니다.")
+            return
+
         if input_pw == self.__password:
             print("로그인 성공")
             self.attempts = 0
